@@ -1,88 +1,200 @@
-*{
+
+body{
+    background-color: #726d6d;
     margin: 0;
-    padding: 0;
+    padding:0%;
     font-family: "Rubik",sans-serif;
     font-size: 20px;
+    width: 100%;
+    height: 100%;
 }
 
-/* Encabezado y barra de navegacion*/
-.header{
-    background-color:#d4f4dd;
-    display: flex;
-    justify-content: space-evenly;
+/*Encabezado*/
+header{
+    display: inline-block; /*flex hace que los elementos dentro se muestren de manera vertical*/
+    justify-content: space-between;
+    background-color: #cceaf4;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: auto;
+    padding: 10px;
+    width: 100%;
+    align-content: center;
+}
+
+.image-logo{
+    display: flex;
+    align-items: center;
+}
+
+.image-logo img{
+    height: 200px;
     width: auto;
+    margin: auto;
 }
 
-.header .image-logo img{
-    height: 150px;
-    width: auto;
-    display: block;
+#page-title{
+    padding: auto;
+    margin:auto;
+    font-weight: 700;
+    font-family: "Rubik";
+    color: #1b18dd;
+    text-align: center;
 }
 
-.header h1{
-    color: rgb(27, 27, 214);
-    font-size: xxx-large;
-    padding-bottom: 5px;
-}
-
-.header h4{
-    color: red;
-    padding-bottom: 5px;
+#subtitle{
+    font-size:medium;
+    color: #d62246;
+    margin: auto;
+    text-align: center;
 }
 
 /*Navbar*/
 nav{
+    background-color: #232323;
     margin: 0;
-    padding: 0;
-}
-.container-fluid{
-    background-color: #17bebb;
-    height: 100%;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    height: 100%;
 }
 
-/*Contenido del inicio*/
-body{
-    background-color:rgb(220, 229, 241);
+nav a{
+    margin: 20px;
+    text-decoration: none;
+    color: #EFEFEF;
+    font-weight: 700;
 }
+/*HOME PAGE*/
+/*Barra iconos Equipos*/
+.barra-equipos{
+    margin: 5px;
+    padding: 2px;
+}
+
+.iconos-equipos{
+    padding: 2px;
+    align-items: center;
+}
+
+.iconos-equipos a{
+    padding: 10px;
+}
+
+.iconos-equipos a img{
+    /*Tamaño imagenes*/
+    height: 50px;
+    width: 50px;
+}
+
+/*Seccion Destacadas*/
+.destacados{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 55%;
+    height: auto;
+    justify-content: center;
+    margin:30px auto;
+}
+
+.noticia-grande{
+    grid-column: 1 ;
+    padding: 5px;
+    align-content: center;
+    background-color: rgb(27, 26, 26);
+}
+
+.noticia-grande a{
+    text-decoration: none;
+    color: white;
+}
+
+.noticias-pequenas{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.noticia-pequena{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.centrado{
+    position: absolute;
+    top: 75%;
+    color: white;
+    background-color: black;
+    padding:0;
+    margin:0;
+    opacity: 0.75;
+    width: 100%;
+    height: 59px;
+}
+
+.centrado a{
+    text-decoration: none;
+    color: white;
+}
+
+.noticia-pequena img{
+    height: 100%;
+    width: 100%;
+}
+
+.noticias-home{
+    border: black 3px solid;
+    width: 55%;
+    margin: auto;
+    padding: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.cards{
+    margin: 5px;
+    padding: 10px;
+    width: 90%;
+    height: auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
 
 /*Pagina de Fixture */
 /*Creo la grilla principal de 3 secciones*/
 .container-fixture{
+    /*Las tres secciones de la pagina se direccionan en columna*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /*flex-flow: column wrap  hace lo mismo que flex direction y flex wrap*/
-    background-color:rgb(220, 229, 241);
+    padding: 10px;
+    background-color:#EFEFEF;
+    justify-content: center;
+    align-content: center;
     justify-items: center;
     align-items: center;
+    text-align: center;
+    text-justify: center;
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 #sections-fixture{ /*formato a cada section, todas son iguales en cuanto a color y fondo por eso uso un id*/
-    margin: 15px;
-    padding: 15px;
+    height: auto;
+    width: 100%;
+    padding: auto;
     text-align: center;
+    margin: 10px;
 }
 
-section{
-    height: 100%;
-    width: 100%;
-}
 /*Seccion de Grupos*/
 .grupos-grid{
     display: grid; /*Disposicion de grilla*/
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(425px,1fr));
 }
 
 /*@media(max-width:1120px){
@@ -103,11 +215,11 @@ section{
 
 table{
     color: white;
-    background-color: #d62246;
+    background-color: #ff3b3f;
 }
 
 thead{
-    background-color: #4b1d3f;
+    background-color: #521314;
 }
 
 th{
@@ -131,45 +243,227 @@ td{
 }
 
 .team{
-    background-color: #a51733;
+    background-color: #851f21;
     font-weight: 400;
 }
 
 /*Seccion Resultados*/
+
 .resultados{
-    
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 5px solid black;
+}
+
+/*Div de cada fecha*/
+
+.cards-wrapper{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.card{
+    margin: 0 .5em;
+    width: calc(100%/5);
+    margin-left: 153px;
+    border-radius: 10px;
+    border: 10px;
+    box-shadow: 2px 6px 8px rgb(22, 22, 26 ,0.18);
+}
+
+
+iframe{
+    max-width: 75%;
+    max-height: 75%;
+    margin: auto;
+}
+
+.carousel-inner{
+    padding: 1em;
+}
+
+.carousel-control-prev{
+    background-color: #726d6d;
+    border-radius: 50%;
+    transform: translateX(-30%);
+}
+
+.carousel-control-next{
+    background-color: #726d6d;
+    border-radius: 50%;
+    margin: 0;
+    transform: translateX(5%); 
+}
+
+/*Fase Final*/
+
+.cards-wrapper-sf{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    padding: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.cards-wrapper-final{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    padding: auto;
+    align-content: center;
+    justify-content: center;
 }
 
 .fase-final{
-    
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    border-top: 5px solid black;
 }
 
+.carousel carousel-dark{
+    justify-content: center;
+    text-align: center;
+}
+
+.titulos{
+    padding-left: 65px;
+    padding-top: 20px;
+    margin-top: 60px;
+    margin-left: 65px;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+}
+
+.carousel-inner{
+    border-top: solid black 3px;
+}
+
+.clasificados{
+    font-style: bold;
+}
+
+#campeon{
+    color: goldenrod;
+}
+#subcampeon{
+    color: silver;
+}
+#tercero{
+    color: rgb(153, 91, 50);
+}
+
+/*Noticias*/
+
+.principal{
+    border-bottom: solid 2px black;
+    margin: 0 100px;
+    padding: auto;
+    display: flex;
+}
+
+.noticia-principal{
+    margin: auto;
+    display: flexbox;
+    text-align: center;
+    padding: 20px;
+}
+
+.noticia-principal h2{
+    font-weight: 800;
+}
+.noticia-principal h2, h5{
+    padding-bottom: 20px;
+}
+.pie-de-pagina{
+    border: solid 1px black;
+    border-top: none;
+}
+
+.imagen-principal{
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.noticia{
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: solid 2px black;
+    display: flex;
+    text-align: center;
+    margin:20px 100px;
+}
+
+.noticia-imagen{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    padding: auto 0;
+}
+
+.noticia img{
+    width: 350px;
+    height: auto;
+    margin: 30px;
+    border-radius: 10%;
+}
 
 /*Pie de pagina*/
-.footer{
-    background-color: #4b1d3f;
+footer{
+    background-color: #232323;
     text-align: center;
     width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.footer .logo-footer img{
-    height: 150px;
+.iconos-footer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-footer{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-footer img{
+    height: 300px;
     width: auto;
     padding: 10px;
 }
 
-.footer .iconos-footer a{
+.iconos-footer a{
     padding: 1%;
-    color: #17bebb;
+    color: #cceaf4;
 }
 
-.footer .iconos-footer a svg{
-    height: 30px;
+.iconos-footer a svg{
+    height: 50px;
     width: auto;
     padding: 10px;
 }
 
-.footer p{
-    background-color: #d62246;
-    color: bisque;
+footer p{
+    background-color: #ff3b3f;
+    color: #EFEFEF;
+    margin: 0;
+    padding: 0;
 }
