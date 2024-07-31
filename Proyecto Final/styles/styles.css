@@ -84,6 +84,8 @@ nav a{
     /*Tamaño imagenes*/
     height: 50px;
     width: 50px;
+    box-shadow: 2px 2px 2px #232323;
+    border-radius: 50%;
 }
 
 /*Seccion Destacadas*/
@@ -144,23 +146,103 @@ nav a{
     width: 100%;
 }
 
+/*Seccion Noticias*/
 .noticias-home{
-    border: black 3px solid;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: black 3px solid;
     width: 55%;
+    margin: auto;
+    padding: auto;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-content: center;
+    border-bottom: black 3px solid;
+}
+
+.noticias-home button{
+    background-color: #232323;
+    border-radius: 3px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    width: 300px;
+}
+.noticias-home a{
+    text-decoration: none;
+    color: black;
+}
+
+.cards{
+    display:flex;
+    margin: 5px;
+    padding: 10px;
+    width: 90%;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color:#cceaf4;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.18);
+}
+
+.cards a{
+    color: #1b18dd;
+}
+.cards img{
+    padding: 10px;
+    margin: auto;
+    height: 90%;
+    width: 40%;
+}
+
+/*Seccion Fixture*/
+
+.fixture-home{
+    width: auto;
     margin: auto;
     padding: auto;
     justify-content: center;
     align-content: center;
 }
 
-.cards{
-    margin: 5px;
-    padding: 10px;
-    width: 90%;
-    height: auto;
-    border: solid black 1px;
-    border-radius: 5px;
+.fixture-home button{
+    background-color: #232323;
+    border-radius: 3px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    width: 300px;
 }
+
+.fixture-home a{
+    text-decoration: none;
+    color: black;
+}
+
+.ultimos-partidos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.ultimo-partido{
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.18);
+    width: 250px;
+    height: auto;
+    background-color:#0a1042ce;
+}
+
+#fecha{
+    color:white;
+}
+
 
 
 /*Pagina de Fixture */
