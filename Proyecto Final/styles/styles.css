@@ -502,6 +502,49 @@ iframe{
     border-radius: 10%;
 }
 
+/*Selecciones*/
+.encabezado-seleccion{
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.encabezado-seleccion img{
+    height: 15em;
+    width: auto;
+}
+.encabezado-seleccion h2{
+    font-weight: 800;
+    padding: 20px;
+}
+
+.card-selec{
+    background-color: #e6e0e0;
+    border: 2px solid black;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.18);
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    border-radius: 5%;
+}
+.card-selec img{
+    width: 98%;
+    height: 50%;
+}
+.card-body-selec{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    text-align: center;
+    height: auto;
+}
+
 /*Pie de pagina*/
 footer{
     background-color: #232323;
