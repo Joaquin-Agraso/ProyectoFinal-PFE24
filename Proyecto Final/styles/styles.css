@@ -1,5 +1,8 @@
 
 body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #726d6d;
     margin: 0;
     padding:0%;
@@ -67,7 +70,7 @@ nav a{
 /*HOME PAGE*/
 /*Barra iconos Equipos*/
 .barra-equipos{
-    margin: 5px;
+    margin: 15px;
     padding: 2px;
 }
 
@@ -88,19 +91,87 @@ nav a{
     border-radius: 50%;
 }
 
+.container-fixture{
+    /*Las tres secciones de la pagina se direccionan en columna*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:#EFEFEF;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+    height: 100%;
+    width: 100%;
+}
+
+/*Aside*/
+aside{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 5%;
+}
+
+aside table{
+    border: black solid 2px;
+    width: auto;
+    height: auto;
+}
+
+.estadisticas{
+    display:block;
+    margin-right: 15px;
+    margin-top: 100px;
+    height: 50%;
+}
+
+#bandera-goleadores{
+    width: 20px;
+    height: auto;
+}
+
+.publicidad{
+    height: 50%;
+    width: auto;
+    margin-top: 250px;
+}
+#carouselExampleAutoplaying{
+    height: 25%;
+}
+.carousel-inner{
+    width: 100%;
+}
+#publi{
+    height: 600px;
+    width: 100%;
+}
+
+
 /*Seccion Destacadas*/
 .destacados{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
-    width: 55%;
+    width: 65%;
     height: auto;
     justify-content: center;
-    margin:30px auto;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    border: solid 1px black;
 }
 
 .noticia-grande{
-    grid-column: 1 ;
+    grid-column: 1;
     padding: 5px;
     align-content: center;
     background-color: rgb(27, 26, 26);
@@ -111,6 +182,9 @@ nav a{
     color: white;
 }
 
+.noticia-grande p{
+    font-size: 2.3vw;
+}
 .noticias-pequenas{
     grid-column: 2;
     display: grid;
@@ -125,33 +199,67 @@ nav a{
 }
 
 .centrado{
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    top: 75%;
     color: white;
     background-color: black;
     padding:0;
     margin:0;
     opacity: 0.75;
     width: 100%;
-    height: 59px;
+    height: 20%;
+    justify-content: center;
+    top: 80%;
+}
+
+.centrado1{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding:0;
+    margin:0;
+    opacity: 0.75;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    top: 80%;
 }
 
 .centrado a{
     text-decoration: none;
     color: white;
+    font-size: auto;
+    text-align: center;
 }
 
+.centrado p{
+    font-size: 1.5vw;
+}
+
+.centrado1 p{
+    font-size: 1.5vw;
+}
+.centrado1 a{
+    text-decoration: none;
+    color: white;
+    font-size: auto;
+    text-align: center;
+}
 .noticia-pequena img{
     height: 100%;
     width: 100%;
 }
+
 
 /*Seccion Noticias*/
 .noticias-home{
     display: flex;
     flex-wrap: wrap;
     border-top: black 3px solid;
-    width: 55%;
+    width: 65%;
     margin: auto;
     padding: auto;
     padding-bottom: 30px;
@@ -198,7 +306,7 @@ nav a{
 /*Seccion Fixture*/
 
 .fixture-home{
-    width: auto;
+    width: 65%;
     margin: auto;
     padding: auto;
     justify-content: center;
@@ -247,22 +355,7 @@ nav a{
 
 /*Pagina de Fixture */
 /*Creo la grilla principal de 3 secciones*/
-.container-fixture{
-    /*Las tres secciones de la pagina se direccionan en columna*/
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10px;
-    background-color:#EFEFEF;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    text-justify: center;
-    height: 100%;
-    width: 100%;
-}
+
 
 #sections-fixture{ /*formato a cada section, todas son iguales en cuanto a color y fondo por eso uso un id*/
     height: auto;
@@ -543,6 +636,43 @@ iframe{
     padding: 5px;
     text-align: center;
     height: auto;
+}
+
+/*Noticias completas estilo*/
+.noticia-completa{
+    border: 1px solid black;
+    width: 65%;
+    height: auto;
+    margin:5% auto;
+}
+
+.noticia-completa article{
+    padding: 2%;
+    background-color:white;
+}
+
+.noticia-completa article img{
+    float: right;
+    height: auto;
+    width: 30%;
+    margin: 1%;
+}
+
+.noticia-completa article h1{
+    padding: 1%;
+    font-size: 2vw;
+    font-weight: 900;
+    text-align: center;
+}
+
+.noticia-completa article h3{
+    padding: 1%;
+    font-size: 1.5vw;
+}
+
+.noticia-completa article p{
+    padding: 1%;
+    font-size: 1vw;
 }
 
 /*Pie de pagina*/
